@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+    font-family: "ByteBounce", sans-serif;
+    font-weight: 400;        
+    letter-spacing: 1.2px;   
+}
+ 
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}

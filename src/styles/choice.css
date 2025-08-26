@@ -1,0 +1,78 @@
+.choice-page {
+    width: 100%;
+    height: 100vh;
+    background: var(--theme-bg) no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.choice-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-bg-shadow);  
+    pointer-events: none; /* não bloqueia clique nos elementos */
+}
+.container {
+    width: 750px;
+    height: 400px;
+    background: var(--theme-popups-choice) no-repeat center center;
+    background-size: contain; 
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 68px;
+    width: 42px;   
+    height: 42px;
+    border: none;
+    cursor: pointer;
+    background: var(--theme-btn-close-normal) no-repeat center center;
+    background-size: contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.characters {
+    width: 400px;
+    height: 250px;  
+    background: var(--character) no-repeat center center;
+    background-size: contain;   
+}
+
+
+.text{
+    font-size: 25px;
+    width: 500px; 
+    text-align: center;
+    font-family: "ByteBounce", sans-serif;
+    
+}
+.btn {  
+    padding-bottom: 8px;
+    width: 160px;    
+    height: 60px;    
+    cursor: pointer;
+    border: none;
+    transition: background 0.4s;
+    background: var(--theme-btn-normal) no-repeat center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 40px;
+    margin: 30px 30px; 
+    font-family: inherit;       
+    align-items: center;
+    justify-content: center;  
+}
