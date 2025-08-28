@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
  
-body {
-    font-family: "ByteBounce", sans-serif;
-    font-weight: 400;        
-    letter-spacing: 1.2px;   
+@font-face {
+  font-family: "ByteBounce";
+  src: url("/src/assets/fonts/ByteBounce.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
+ 
  
 a{
   text-decoration: none;

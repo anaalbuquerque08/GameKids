@@ -171,7 +171,7 @@
 }
 
 .game-card {
-    width: 256px; 
+    width: 250px; 
     height: 192px; 
     background: var(--card) no-repeat center center;
     background-size: contain;    
@@ -179,14 +179,25 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;  
+    padding: 20px;  
     cursor: pointer;
     margin: 20px 0;
 }
 
+.game-card:hover{
+    width: 260px; 
+    height: 202px; 
+}
+
 .img-game {
-    width: 208px;
-    height: 130px;
+    width: 190px;
+    height: 120px; 
+}
+
+.name-game{
+    font-size: 36px; 
+    text-align: center;
+    font-family: "ByteBounce", sans-serif;
 }
 
 /* -------------------------------

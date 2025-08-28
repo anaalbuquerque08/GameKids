@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
     background: var(--theme-bg-shadow);  
-    pointer-events: none; /* não bloqueia clique nos elementos */
+    pointer-events: none; 
 }
 .container {
     width: 750px;
@@ -67,6 +67,25 @@
     border: none;
     transition: background 0.4s;
     background: var(--theme-btn-normal) no-repeat center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 40px;
+    margin: 30px 30px; 
+    font-family: inherit;       
+    align-items: center;
+    justify-content: center;  
+} 
+
+
+.btn:hover {
+    padding-bottom: 8px;
+    width: 167px;    
+    height: 60px;    
+    cursor: pointer;
+    border: none;
+    transition: background 0.4s;
+    background: var(--theme-btn-hover) no-repeat center center;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
