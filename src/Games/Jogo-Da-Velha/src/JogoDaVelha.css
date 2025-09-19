@@ -1,0 +1,148 @@
+.jogo-da-velha * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal */
+.jogo-da-velha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  font-family: sans-serif;
+  min-height: 100vh; /* permite crescer se precisar */
+  background-color: #eee;
+  padding: 2rem 1rem;
+}
+
+/* Título do jogo */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Tabuleiro responsivo */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+
+  width: 100%;
+  max-width: 400px;  /* tamanho máximo do tabuleiro */
+  aspect-ratio: 1;    /* mantém quadrado */
+}
+
+/* Estado de game-over */
+.board.game-over {
+  opacity: 0.8;
+}
+
+/* Células do tabuleiro */
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  border-radius: 6px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00000066;
+
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito hover apenas para células vazias */
+.cell:not(.O):not(.X):hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Células ocupadas */
+.cell.O,
+.cell.X,
+.game-over .cell {
+  cursor: not-allowed;
+}
+
+/* Cores dos jogadores */
+.cell.O {
+  background-color: #99aa37;
+}
+
+.cell.X {
+  background-color: #c45c1b;
+}
+
+/* Footer do jogo */
+.jogo-da-velha footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Mensagem de vitória/empate */
+.winner-message {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.winner-message span.O {
+  color: #99aa37;
+}
+
+.winner-message span.X {
+  color: #c45c1b;
+}
+
+.winner-message span.E {
+  color: #777;
+}
+
+/* Botão de reset */
+.jogo-da-velha button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #0c9200;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.jogo-da-velha button:hover {
+  background-color: #0a7400;
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .board {
+    gap: 0.5rem;
+  }
+
+  .cell {
+    font-size: 1.5rem;
+  }
+
+  .winner-message {
+    font-size: 1.2rem;
+  }
+
+  .jogo-da-velha button {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}

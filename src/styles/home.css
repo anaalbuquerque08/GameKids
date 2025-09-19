@@ -2,243 +2,252 @@
    HOME PAGE
 ================================ */
 .home-page {
-    width: 100%;
-    height: 100vh;
-    background: var(--theme-bg) no-repeat center center / cover;
-    display: flex; 
-    justify-content: center; 
-    padding: 70px;
+  background: var(--theme-bg) no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 /* ================================
    SIDEBAR
 ================================ */
-.sidebar {      
-    width: 420px; 
-    height: calc(100vh - 120px);
-    background: var(--sidebar-character) no-repeat center center;
-    background-size: contain;     
+.sidebar {
+  width: 420px;
+  height: 600px;
+  background: var(--sidebar-character) no-repeat center center;
+  background-size: contain;
+  margin-top: 60px;
 }
 
 .sidebar-info {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-    position: relative;       
-    top: -60px;               
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -60px;
 }
 
 /* -------------------------------
    Character Info (Character + Infos)
 ---------------------------------*/
 .character {
-    width: 230px;
-    height: 250px;  
-    background: var(--character) no-repeat center center;
-    background-size: contain;   
-    margin-bottom: 5px;
+  width: 180px;
+  height: 220px;
+  background: var(--character) no-repeat center center;
+  background-size: contain;
+  margin-bottom: -12px;
 }
 
 .infos {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    gap: 10px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -12px;
 }
 
 .name {
-    font-size: 76px;
-    width: 100%;
-    max-width: 500px; 
-    text-align: center;
-    font-family: "ByteBounce", sans-serif;
+  font-size: 60px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  font-family: "ByteBounce", sans-serif;
 }
 
 .level {
-    font-size: 46px; 
-    align-self: center;
+  font-family: "ByteBounce", sans-serif;
+  font-size: 34px;
+  align-self: center;
 }
 
-.progress { 
-    width: 100%; 
-    height: 50px;   
-    background: var(--slider-level) no-repeat center center;
-    background-size: contain;  
-     align-self: center;   
+.progress {
+  margin-top: -16px;
+  width: 160px;
+  height: 50px;
+  background: var(--slider-level) no-repeat center center;
+  background-size: contain;
+  align-self: center;
 }
 
 .hearts-container {
-    width: 220px;
-    height: 35px;  
-    background: var(--hearts) no-repeat center center;
-    background-size: contain;  
-    margin-bottom: 30px;
-     align-self: center;
+  width: 120px;
+  height: 35px;
+  margin-top: -16px;
+  background: var(--hearts) no-repeat center center;
+  background-size: contain;
+  margin-bottom: 30px;
+  align-self: center;
 }
 
 .point-container {
-    display: flex; 
-    align-items: center;  
-    gap: 12px;  
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: -42px;
+  margin-bottom: 12px;
 }
 
 .point-container p {
-    font-size: 46px;  
-    font-family: "ByteBounce", sans-serif;
+  font-size: 30px;
+  font-family: "ByteBounce", sans-serif;
 }
- 
 
-.coin { 
-    background: var(--coin);
-    width: 72px;
-    height: 55px;   
-    background-size: contain;    
-    background-repeat: no-repeat;
-    background-position: center;
+.coin {
+  background: var(--coin);
+  width: 42px;
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .star {
-    background: var(--star);
-    width: 72px;
-    height: 55px;   
-    background-size: contain;    
-    background-repeat: no-repeat;
-    background-position: center;
-    }
+  background: var(--star);
+  width: 42px;
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* -------------------------------
    Info Box
 ---------------------------------*/
-.info-box { 
-    padding: 26px;
-    margin: 80px;
-    font-size: 26px;   
-    width: 240px;
-    height: 230px;   
-    background: var(--theme-info-box) no-repeat center center;
-    background-size: contain;    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.info-box {
+  padding: 26px;
+  margin: 80px;
+  font-size: 18px;
+  width: 180px;
+  height: 180px;
+  background: var(--theme-info-box) no-repeat center center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -8px;
 }
 
 /* ================================
    MAIN CONTENT
 ================================ */
 .main-content {
-    margin: 0;
-    display: flex;
-    flex-direction: column; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-right: 62px;
 }
 
 /* -------------------------------
    Game Tabs
 ---------------------------------*/
 .tabs {
-    display: flex;
-    gap: 15px; 
-    padding-left: 20px;
+  display: flex;
+  gap: 15px;
+  width: 900px;
 }
 
 .tab {
-    width: 212px;
-    padding: 8px 12px;
-    border: 2px solid #000;
-    background: #fefefe;
-    cursor: pointer;
+  width: 212px;
+  padding: 8px 12px;
+  border: 2px solid #000;
+  background: #fefefe;
+  cursor: pointer;
 }
 
 .tab.active {
-    background: #ccc;
+  background: #ccc;
 }
 
 /* -------------------------------
    Games Container
 ---------------------------------*/
 .games-container {
-    width: 1200px;
-    height: 600px;
-    background: var(--theme-bg-banner) no-repeat center center;
-    background-size: contain;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 600px;
+  margin: 0 auto;
+  background: var(--theme-bg-banner) no-repeat center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .games-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;   
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 .game-card {
-    width: 250px; 
-    height: 192px; 
-    background: var(--card) no-repeat center center;
-    background-size: contain;    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;  
-    cursor: pointer;
-    margin: 20px 0;
+  width: 220px;
+  height: 192px;
+  background: var(--card) no-repeat center center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  margin: 20px 0;
+ transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-.game-card:hover{
-    width: 260px; 
-    height: 202px; 
+.game-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
 }
 
 .img-game {
-    width: 190px;
-    height: 120px; 
+  width: 190px;
+  height: 120px;
 }
 
-.name-game{
-    font-size: 36px; 
-    text-align: center;
-    font-family: "ByteBounce", sans-serif;
+.name-game {
+  font-size: 28px;
+  text-align: center;
+  font-family: "ByteBounce", sans-serif;
+  margin-bottom: 6px;
 }
 
 /* -------------------------------
    Bottom Boxes
 ---------------------------------*/
 .bottom-boxes {
-    display: flex;
-    gap: 18px;
-    justify-content: center; 
+  display: flex;
+  gap: 18px;
+  justify-content: space-around;
 }
 
 .box {
-    width: 100%;
-    max-width: 577px; 
-    height: 260px;  
-    display: flex;  
+  width: 300px;
+  padding-inline: 120px;
+  display: flex;
 }
 
-.lider-box { 
-    background: var(--lider-box) no-repeat center center; 
-    background-size: contain;    
+.lider-box {
+  background: var(--lider-box) no-repeat center center;
+  background-size: contain;
 }
 
-.geral-box { 
-    background: var(--info-box-geral) no-repeat center center;
-    background-size: contain;     
+.geral-box {
+  background: var(--info-box-geral) no-repeat center center;
+  background-size: contain;
 }
 
 /* -------------------------------
    Elements (award, mushroom)
 ---------------------------------*/
 .award {
-    width: 80px; 
-    height: 89px;  
-    background: var(--award) no-repeat center center;
-    background-size: contain;    
+  width: 80px;
+  height: 89px;
+  background: var(--award) no-repeat center center;
+  background-size: contain;
 }
 
 .mushroom {
-    width: 140px; 
-    height: 140px;  
-    background: var(--mushroom) no-repeat center center;
-    background-size: contain;   
+  width: 80px;
+  height: 89px;
+  background: var(--mushroom) no-repeat center center;
+  background-size: contain;
 }
