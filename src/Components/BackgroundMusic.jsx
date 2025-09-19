@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
-const DEFAULT_MUSIC = "/sounds/song/retro-song-3.mp3";
+const DEFAULT_MUSIC = "/sounds/song/retro-song-2.mp3";
 
-export default function BackgroundMusic({ autoPlay = true, loop = true, volume = 0.11}) {
+export default function BackgroundMusic({ autoPlay = true, loop = true, volume = 0.04}) {
   const audioRef = useRef(null);
 
   useEffect(() => {

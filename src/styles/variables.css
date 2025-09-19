@@ -1,5 +1,78 @@
  
+:root { 
+  /* FONT SIZE */
+  --label-s: 10px;
+  --label: 12px;
+  --pf: 14px;
+  --h6: 16px;
+  --h5: 20px;
+  --h4: 24px;
+  --h3: 28px;
+  --h2: 40px;
+  --h1: 68px;
 
+
+  /* BORDER*/
+  --border-s: 4px solid var(--black);
+  --border-m: 6px solid var(--black);
+  --border-lg: 8px solid var(--black);
+
+  
+  /* FONT WEIGHT */
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+
+  /* Padding */
+  --space-xs: 2px;
+  --space-s: 4px;
+  --space-sm: 6px;
+  --space-m: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+
+  /* BORDER RADIUS */
+  --radius-xm: 4px;
+  --radius-md: 8px;
+  --radius-sm: 12px;
+  --radius-lg: 16px;
+  --radius-round: 100px;
+
+  /* SHADOWS */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.25);
+  --shadow-heavy: rgba(0, 0, 0, 0.4);
+
+  /* COLORS - BASIC */
+  --white: #ffffff;
+  --black: #000000;
+  --bege:#EACD91;
+  --grey-100: #F8F8F8;
+  --grey-200: #D2D2D2;
+  --grey-300: #A2A2A2;
+
+  /* COLORS - PURPLE */
+  --purple-100: #B9D3F8;
+  --purple-200: #8CA1D7; 
+
+  /* COLORS - GREEN */
+  --green-100: #90A878;
+  --green-200: #155943;
+
+
+  --orange-100:#E07D36;
+  /* COLORS - YELLOW */
+  --yellow-100: #FFDC9A;
+  --yellow-150: #F6C25F;
+  --yellow-200: #E0960D;
+  --yellow-250: #c07d00; 
+
+}
 :root {
   --font-size-base: 16px;
   --font-size-lg: 20px;
@@ -42,8 +115,13 @@
 }
 
 
+
+
+
+
 /* Tema squirrel */
 .theme-squirrel {
+  --info-box: var( --orange-100);
   --character: url("../assets/characters/squirrel.png");
   --theme-name: "TONY";
   --theme-bg: url("../assets/backgrounds/background-squirrel.png");
@@ -61,6 +139,8 @@
   --theme-primary: #d97706;   
   --theme-secondary: #facc15;  
   --theme-accent: #92400e;
+  --tabs:#316146;
+  --background-cards-grid:rgba(75, 150, 107, 0.5)
 }
 
 /* Tema frog  */

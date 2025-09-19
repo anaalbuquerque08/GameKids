@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CharacterInfo({ name, level = 1, coins = 32, stars = "5/25" }) {
+export default function CharacterInfo({ name, level = 2, coins = 32, stars = "5/25" }) {
   return (
     <div className="infos">
       <h1 className="name">{name}</h1>

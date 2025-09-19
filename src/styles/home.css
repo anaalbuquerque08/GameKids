@@ -5,37 +5,62 @@
   background: var(--theme-bg) no-repeat center center / cover;
   display: flex;
   justify-content: center;
+  padding-top: var(--space-4xl);
   min-height: 100vh;
 }
 
 /* ================================
    SIDEBAR
 ================================ */
+.sidebar-container{
+  width: 250px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--bege);   
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-4xl);
+  margin-right: var(--space-md) ; 
+
+}
 .sidebar {
-  width: 420px;
-  height: 600px;
-  background: var(--sidebar-character) no-repeat center center;
-  background-size: contain;
-  margin-top: 60px;
+  width: 96%;
+  height: 98%;  
+  position: relative;
+  border-width: var(--my-border);
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m);
+  border-radius: var(--radius-md); 
 }
 
 .sidebar-info {
+  bottom: 80px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: -60px;
+  align-items: center;  
+ 
 }
 
 /* -------------------------------
    Character Info (Character + Infos)
 ---------------------------------*/
-.character {
+.character { 
   width: 180px;
   height: 220px;
   background: var(--character) no-repeat center center;
   background-size: contain;
-  margin-bottom: -12px;
+  
 }
 
 .infos {
@@ -75,16 +100,16 @@
   margin-top: -16px;
   background: var(--hearts) no-repeat center center;
   background-size: contain;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   align-self: center;
 }
 
 .point-container {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   margin-top: -42px;
-  margin-bottom: 12px;
+  padding-bottom: 22px;
 }
 
 .point-container p {
@@ -113,17 +138,21 @@
    Info Box
 ---------------------------------*/
 .info-box {
-  padding: 26px;
-  margin: 80px;
-  font-size: 18px;
-  width: 180px;
-  height: 180px;
-  background: var(--theme-info-box) no-repeat center center;
-  background-size: contain;
+  width: 80%;
+  height:26%;
+  padding: var(--space-lg); 
+  font-size: var(--h6); 
+  background-color: var(--info-box); 
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: -8px;
+  justify-content: center; 
+  position: absolute;
+  bottom: -46px;
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m);
+  border-radius: var(--radius-xm); 
 }
 
 /* ================================
@@ -132,15 +161,16 @@
 .main-content {
   margin: 0;
   display: flex;
-  flex-direction: column;
-  margin-top: 60px;
-  margin-right: 62px;
+  flex-direction: column; 
+  align-items: center; 
+  padding-top: 60px;
 }
 
 /* -------------------------------
    Game Tabs
 ---------------------------------*/
 .tabs {
+  
   display: flex;
   gap: 15px;
   width: 900px;
@@ -149,96 +179,141 @@
 .tab {
   width: 212px;
   padding: 8px 12px;
-  border: 2px solid #000;
-  background: #fefefe;
+  background: var(--tabs);
   cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m); 
+  border-bottom: 0px;
+   font-size: var(--font-size-lg);
 }
 
 .tab.active {
-  background: #ccc;
+  /* Fundo da tab ativa */
+  background: rgba(75, 150, 107, 0.5); 
 }
-
 /* -------------------------------
    Games Container
 ---------------------------------*/
+ 
 .games-container {
-  width: 600px;
-  margin: 0 auto;
-  background: var(--theme-bg-banner) no-repeat center center;
-  background-size: contain;
+  width: 100%; 
+  background-color: var(--background-cards-grid);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m); 
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius:  var(--radius-sm);
+  margin-bottom: 16px ;
 }
 
 .games-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: var(--space-m);
 }
 
 .game-card {
-  width: 220px;
-  height: 192px;
-  background: var(--card) no-repeat center center;
+  width: 100%;
+  height: 90%;
+  border: none;
+  background: var(--bege);
   background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  cursor: pointer;
-  margin: 20px 0;
+  padding: var(--space-md);
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m);
+  border-radius: var(--radius-xm); 
+  cursor: pointer; 
  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .game-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1); 
   filter: brightness(1.05);
 }
 
 .img-game {
-  width: 190px;
-  height: 120px;
+  width: 160px;
+  height: 90px;  
+  border: var(--border-s);
 }
 
-.name-game {
+.name-game { 
+  padding-top: var( --space-s);
   font-size: 28px;
   text-align: center;
   font-family: "ByteBounce", sans-serif;
   margin-bottom: 6px;
-}
-
+} 
 /* -------------------------------
    Bottom Boxes
 ---------------------------------*/
 .bottom-boxes {
+  width: 100%;
+  height:100%;
   display: flex;
   gap: 18px;
+  margin-bottom: 126px;
   justify-content: space-around;
+
 }
 
 .box {
-  width: 300px;
-  padding-inline: 120px;
+  width: 100%; 
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 6px solid #000;
+  border-bottom: 6px solid #000;
+  position: relative;
 }
 
 .lider-box {
-  background: var(--lider-box) no-repeat center center;
-  background-size: contain;
+  background: var(--green-200);
+  display: flex;
+  position: relative;
 }
 
 .geral-box {
-  background: var(--info-box-geral) no-repeat center center;
-  background-size: contain;
+  background: var(--bege)  
+}
+.tab-line {
+  width: 96%;
+  height: 94%;  
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  border-right: 6px solid black;
+  border-bottom: 6px solid black;
+  border-radius: 5px;  
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
 
 /* -------------------------------
    Elements (award, mushroom)
 ---------------------------------*/
 .award {
+  bottom: 150px;
+  left: -30px;
+  position: absolute;
   width: 80px;
   height: 89px;
   background: var(--award) no-repeat center center;
@@ -246,8 +321,11 @@
 }
 
 .mushroom {
-  width: 80px;
-  height: 89px;
+  top: 130px;
+  right: -60px;
+  position: absolute;
+  width: 100px;
+  height: 109px;
   background: var(--mushroom) no-repeat center center;
   background-size: contain;
 }

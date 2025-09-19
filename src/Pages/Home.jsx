@@ -12,8 +12,11 @@ export default function Home() {
 
   return (
     <div className={`home-page ${theme}`}>
-      <div className="sidebar">
-        <Sidebar name={name} />
+      <div className="sidebar-container">
+        <div className="sidebar">
+        <Sidebar name={name} />          
+        </div>
+
       </div>
       <main className="main-content"> 
         <GameTabs />

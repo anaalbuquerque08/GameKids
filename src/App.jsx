@@ -2,11 +2,10 @@ import React from "react";
 import "./App.css"; 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";  
-import Tutorial from "./Pages/Tutorial";
+import TutorialGamePage from "./Pages/TutorialGamePage";
 import Choice from "./Pages/Choice";
 import BackgroundMusic from "./Components/BackgroundMusic"; // importando música
-import GamePage from "./Pages/GamePage";
-import TutorialGamePage from "./Pages/TutorialGamePage";
+import GamePage from "./Pages/GamePage"; 
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Choice />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/tutorial" element={<Tutorial />} /> 
+          <Route path="/tutorial" element={<TutorialGamePage/>} /> 
           <Route path="/games/:id" element={<GamePage />} />
           <Route path="/tutorial/:id" element={<TutorialGamePage />}/>
         </Routes>
