@@ -9,46 +9,44 @@
   background: var(--theme-bg) no-repeat center center / cover;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   height: 100vh;
 }
 
-.home-page-container{
+.home-page-container {
   height: 74vh;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
-
 
 /* ================================
    SIDEBAR
 ================================ */
-.sidebar-container{
+.sidebar-container {
   width: 250px;
-  height: 100%;  
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background: var(--bege);   
+  background: var(--bege);
   border-top: var(--border-s);
   border-left: var(--border-s);
   border-right: var(--border-m);
   border-bottom: var(--border-m);
-  border-radius: var(--radius-md); 
-  margin-right: var(--space-md) ; 
-
+  border-radius: var(--radius-md);
+  margin-right: var(--space-md);
 }
 .sidebar {
   width: 96%;
-  height: 98%;  
+  height: 98%;
   position: relative;
   border-width: var(--my-border);
   border-top: var(--border-s);
   border-left: var(--border-s);
   border-right: var(--border-m);
   border-bottom: var(--border-m);
-  border-radius: var(--radius-md); 
+  border-radius: var(--radius-md);
 }
 
 .sidebar-info {
@@ -58,19 +56,17 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;  
- 
+  align-items: center;
 }
 
 /* -------------------------------
    Character Info (Character + Infos)
 ---------------------------------*/
-.character { 
+.character {
   width: 180px;
   height: 220px;
   background: var(--character) no-repeat center center;
   background-size: contain;
-  
 }
 
 .infos {
@@ -149,36 +145,35 @@
 ---------------------------------*/
 .info-box {
   width: 80%;
-  height:26%;
-  padding: var(--space-lg); 
-  font-size: var(--h6); 
-  background-color: var(--info-box); 
+  height: 26%;
+  padding: var(--space-lg);
+  font-size: var(--h6);
+  background-color: var(--info-box);
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   position: absolute;
   bottom: -66px;
   border-top: var(--border-s);
   border-left: var(--border-s);
   border-right: var(--border-m);
   border-bottom: var(--border-m);
-  border-radius: var(--radius-xm); 
+  border-radius: var(--radius-xm);
 }
 
 /* ================================
    MAIN CONTENT
 ================================ */
 .main-content {
-  height: 100%; 
+  height: 100%;
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
 }
 
 /* -------------------------------
    Game Tabs
 ---------------------------------*/
 .tabs {
-  
   display: flex;
   gap: 15px;
   width: 900px;
@@ -193,21 +188,21 @@
   border-top-right-radius: 5px;
   border-top: var(--border-s);
   border-left: var(--border-s);
-  border-right: var(--border-m); 
+  border-right: var(--border-m);
   border-bottom: 0px;
-   font-size: var(--font-size-lg);
+  font-size: var(--font-size-lg);
 }
 
 .tab.active {
   /* Fundo da tab ativa */
-  background: rgba(75, 150, 107, 0.5); 
+  background: rgba(75, 150, 107, 0.5);
 }
 /* -------------------------------
    Games Container
 ---------------------------------*/
- 
+
 .games-container {
-  width: 100%; 
+  width: 100%;
   height: 66%;
   background-color: var(--background-cards-grid);
   display: flex;
@@ -217,10 +212,10 @@
   border-top: var(--border-s);
   border-left: var(--border-s);
   border-right: var(--border-m);
-  border-bottom: var(--border-m); 
+  border-bottom: var(--border-m);
   border-bottom-left-radius: var(--radius-sm);
-  border-bottom-right-radius:  var(--radius-sm);
-  margin-bottom: 16px ;
+  border-bottom-right-radius: var(--radius-sm);
+  margin-bottom: 16px;
 }
 
 .games-grid {
@@ -244,43 +239,42 @@
   border-left: var(--border-s);
   border-right: var(--border-m);
   border-bottom: var(--border-m);
-  border-radius: var(--radius-xm); 
-  cursor: pointer; 
- transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  border-radius: var(--radius-xm);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .game-card:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   filter: brightness(1.05);
 }
 
 .img-game {
   width: 160px;
-  height: 90px;  
+  height: 90px;
   border: var(--border-s);
 }
 
-.name-game { 
-  padding-top: var( --space-s);
+.name-game {
+  padding-top: var(--space-s);
   font-size: 28px;
   text-align: center;
   font-family: "ByteBounce", sans-serif;
   margin-bottom: 6px;
-} 
+}
 /* -------------------------------
    Bottom Boxes
 ---------------------------------*/
 .bottom-boxes {
   width: 100%;
-  height:100%;
+  height: 100%;
   display: flex;
   gap: 18px;
   justify-content: space-around;
-
 }
 
 .box {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -291,7 +285,7 @@
   border-right: 6px solid #000;
   border-bottom: 6px solid #000;
   position: relative;
-   background: var(--bege) ;
+  background: var(--bege);
 }
 
 .lider-box {
@@ -299,15 +293,15 @@
   display: flex;
   position: relative;
 }
- 
+
 .tab-line {
   width: 96%;
-  height: 94%;  
+  height: 94%;
   border-top: 4px solid black;
   border-left: 4px solid black;
   border-right: 6px solid black;
   border-bottom: 6px solid black;
-  border-radius: 5px;  
+  border-radius: 5px;
   position: relative;
   display: flex;
   align-items: end;
@@ -322,14 +316,33 @@
   left: -30px;
   position: absolute;
   width: 80px;
-  height: 89px; 
+  height: 89px;
 }
 
-.mushroom img{ 
+.mushroom img {
   position: absolute;
   width: 100px;
-  height: 109px;  
+  height: 109px;
 
-  top: 60%;   
-  right: -12%; 
+  top: 60%;
+  right: -12%;
+}
+
+/* -------------------------------
+   Pequenas alterações - telas (Desktop - notebook)
+---------------------------------*/
+@media (min-width: 768px) and (max-width: 1900px) {
+  .point-container {
+    margin-top: -52px !important;
+  }
+
+  .name {
+    margin-top: -16px;
+  }
+
+  .games-grid {
+    gap: 0px !important;
+    column-gap: var(--space-md) !important;
+    margin-top: var(--space-md);
+  }
 }
