@@ -1,8 +1,13 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
+import "../Styles/tutorialGame.css";
+import TutorialTabs from "../Components/GameTutorial/TutorialTabs";
+import TutorialContainer from "../Components/GameTutorial/TutorialContainer";
 
 const TutorialGamePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { theme, name } = location.state || { theme: "theme-squirrel", name: "ESQUILO" };
 
   const gameNames = {
     "jogo-da-velha": "Jogo da Velha",
@@ -27,13 +32,40 @@ const TutorialGamePage = () => {
   // };
   // VAI RENDERIZAR:  {tutorialComponents[id] || <p>Tutorial não disponível.</p>}
 
+
+
+
+
+
+
   return (
-    <div className="tutorial-page">
-      <h1>Tutorial: {gameNames[id] || id}</h1>
-      <p>{tutorials[id] || "Tutorial não disponível."}</p>
-      <button onClick={() => navigate(`/games/${id}`)}>Jogar Agora!</button>
+    <div className={`tutorial-page ${theme}`}>
+      <div className="tutorial-page-container">
+
+        <div className="tutorial-header">
+          <main className="main-content">
+            <TutorialTabs />
+            <TutorialContainer />
+          </main>
+           
+
+          <div className="tutorial-instructions">
+            <div className="tutorial-instructions-card">
+              <h2>Instruções aqui </h2>
+            </div>
+            <button className="play-button" onClick={() => navigate(`/games/${id}`)}>JOGAR!</button>
+          </div>
+        </div>
+
+        <div className="tutorial-footer">
+          <h2>Aqui eh o footer do jogo</h2>
+        </div>
+
+      </div>
     </div>
   );
+
+
 };
 
 export default TutorialGamePage;
