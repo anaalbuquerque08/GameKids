@@ -25,6 +25,12 @@
   margin-bottom: 2rem;
 }
 
+/* Btns modo seleção do jogo - amigo / maquina */
+.mode-selection{
+  display: flex;
+  gap: 22px;
+}
+
 /* Tabuleiro responsivo */
 .board {
   display: grid;
@@ -104,7 +110,12 @@
   color: #777;
 }
 
-/* Botão de reset */
+/* Container e botão de reiniciar partida / Reescolher modo  */
+.footer-buttons{
+  display: flex;
+  gap: 22px;
+}
+
 .jogo-da-velha button {
   padding: 0.8rem 1.5rem;
   border: none;
