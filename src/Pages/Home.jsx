@@ -8,7 +8,15 @@ import BottomBoxes from "../Components/Home/BottomBoxes";
 
 export default function Home() {
   const location = useLocation();
-  const { theme, name } = location.state || { theme: "theme-squirrel", name: "ESQUILO" };
+  const { theme, name } = location.state || {
+    theme: "theme-squirrel",
+    name: "ESQUILO",
+  };
+
+  React.useEffect(() => {
+    localStorage.setItem("name", name);
+    localStorage.setItem("theme", theme);
+  }, []);
 
   return (
     <div className={`home-page ${theme}`}>
@@ -17,7 +25,6 @@ export default function Home() {
           <div className="sidebar">
             <Sidebar name={name} />
           </div>
-
         </div>
         <main className="main-content">
           <GameTabs />

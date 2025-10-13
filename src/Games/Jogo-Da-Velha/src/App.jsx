@@ -1,12 +1,23 @@
 import React from "react";
 import "./JogoDaVelha.css";
+import CharacterDisplay from "../../../Components/Choice/CharacterDisplay";
+import SoundButton from "../../../Components/SoundButton";
+import SidebarTicTacToe from "../components/SidebarTicTacToe";
 
 function App() {
+  const name = localStorage.getItem("name");
+  const theme = localStorage.getItem("theme");
+
   const emptyBoard = Array(9).fill("");
   const [board, setBoard] = React.useState(emptyBoard);
   const [currentPlayer, setCurrentPlayer] = React.useState(null);
   const [winner, setWinner] = React.useState(null);
+  const [winnerName, setWinnerName] = React.useState("");
   const [mode, setMode] = React.useState(null); // "amigo" ou "maquina"
+  const [vitoriasOzzy, setVitoriasOzzy] = React.useState(0);
+  const [vitoriasTony, setVitoriasTony] = React.useState(0);
+  const [vitoriasRobo, setVitoriasRobo] = React.useState(0);
+
 
   React.useEffect(() => {
     localStorage.setItem("personagem", "Esquilo");
@@ -86,8 +97,31 @@ function App() {
     if (winner) return;
 
     const newWinner = checkWinner(board);
+
     if (newWinner) {
       setWinner(newWinner);
+
+      if (newWinner === "X") {
+        if (name === "OZZY") {
+          setVitoriasOzzy((prev) => prev + 1);
+          setWinnerName("OZZY");
+        }
+        if (name === "TONY") {
+          setVitoriasTony((prev) => prev + 1);
+          setWinnerName("TONY");
+        }
+      } else if (newWinner === "O") {
+        if (mode === "maquina") {
+          setVitoriasRobo((prev) => prev + 1);
+          setWinnerName("ROBO");
+        } else {
+          const segundoJogador = name === "OZZY" ? "TONY" : "OZZY";
+          setWinnerName(segundoJogador);
+          if (segundoJogador === "OZZY") setVitoriasOzzy((prev) => prev + 1);
+          if (segundoJogador === "TONY") setVitoriasTony((prev) => prev + 1);
+        }
+      }
+
       return;
     }
 
@@ -110,6 +144,7 @@ function App() {
     setBoard(emptyBoard);
     setWinner(null);
     setCurrentPlayer("X");
+    setWinnerName("");
   };
 
   const resetToMenu = () => {
@@ -117,60 +152,111 @@ function App() {
     setWinner(null);
     setCurrentPlayer("X");
     setMode(null);
+    setVitoriasOzzy(0);
+    setVitoriasTony(0);
+    setVitoriasRobo(0);
   };
+
+  function handleCharacter(e, isHover) {
+    const characterDiv = document.querySelector(".characters");
+
+    if (isHover && e.target.innerText === "Robo") {
+      characterDiv.style.backgroundImage =
+        "url('/src/assets/characters/robo.png')";
+    } else {
+      characterDiv.style.backgroundImage = "var(--character)";
+    }
+  }
 
   if (!mode) {
     return (
-      <main className="jogo-da-velha">
-        <h1 className="title">Jogo da Velha</h1>
-        <div className="mode-selection">
-          <button onClick={() => setMode("amigo")}>👥 Jogar com Amigo</button>
-          <button onClick={() => setMode("maquina")}>🤖 Jogar contra Máquina</button>
-        </div>
-      </main>
+      <div className={`choice-page ${theme}`}>
+        <main className="container">
+          <CharacterDisplay />
+          <div className="text">
+            <h1>
+              COMO VOCE QUER <br /> JOGAR?
+            </h1>
+          </div>
+          <div className="btn-container">
+            <SoundButton className="btn" onClick={() => setMode("amigo")}>
+              Amigo
+            </SoundButton>
+            <SoundButton
+              className="btn"
+              onClick={() => setMode("maquina")}
+              onMouseEnter={(e) => handleCharacter(e, true)}
+              onMouseLeave={(e) => handleCharacter(e, false)}
+            >
+              Robo
+            </SoundButton>
+          </div>
+        </main>
+      </div>
     );
   }
 
   return (
-    <main className="jogo-da-velha">
-      <h1 className="title">Jogo da Velha</h1>
-
-      <div className={`board ${winner ? "game-over" : ""}`}>
-        {board.map((item, index) => (
-          <div
-            key={index}
-            className={`cell ${item}`}
-            onClick={() =>
-              (!winner &&
-                ((mode === "amigo") ||
-                  (mode === "maquina" && currentPlayer === "X"))) &&
-              handleCellClick(index)
-            }
-          >
-            {item}
+    <div className={`home-page tic-tac-toe ${theme}`}>
+      <div className="container-tic-tac-toe">
+        <div className="sidebar-container tic-tac-toe">
+          <div className="sidebar">
+            <SidebarTicTacToe
+              name={name}
+              vitorias={ name === "OZZY" ? vitoriasOzzy : name === "TONY" ? vitoriasTony : 0 }
+              isOpponent={false}
+            />
           </div>
-        ))}
-      </div>
+        </div>
+        <main className={`jogo-da-velha ${name} `}>
+          <h1 className={`title ${name} `}>Jogo da Velha</h1>
 
-      {winner && (
-        <footer>
-          {winner === "E" ? (
-            <h2 className="winner-message">
-              <span className={winner}>Empatou!</span>
-            </h2>
-          ) : (
-            <h2 className="winner-message">
-              <span className={winner}>{winner}</span> Venceu!
-            </h2>
+          <div className={`board ${winner ? "game-over" : ""}`}>
+            {board.map((item, index) => (
+              <div
+                key={index}
+                className={`cell ${item}`}
+                onClick={() =>
+                  !winner &&
+                  (mode === "amigo" ||
+                    (mode === "maquina" && currentPlayer === "X")) &&
+                  handleCellClick(index)
+                }
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+
+          {winner && (
+            <footer>
+              {winner === "E" ? (
+                <h2 className={`winner-message ${name}`}>
+                  <span className={winner}>Empatou!</span>
+                </h2>
+              ) : (
+                <h2 className={`winner-message ${name}`}>
+                  <span className={winner}>{winnerName}</span> Venceu!
+                </h2>
+              )}
+              <div className="footer-buttons">
+                <button onClick={resetGameSameMode}>Jogar novamente</button>
+                <button onClick={resetToMenu}>Voltar ao menu</button>
+              </div>
+            </footer>
           )}
-
-          <div className="footer-buttons">
-            <button onClick={resetGameSameMode}>🔁 Jogar novamente</button>
-            <button onClick={resetToMenu}>🏠 Voltar ao menu</button>
+        </main>
+        <div className="sidebar-container tic-tac-toe">
+          <div className="sidebar">
+            <SidebarTicTacToe 
+            name={mode === "maquina" ? "ROBO" : name === "TONY" ? "OZZY" : "TONY"} 
+            vitorias={  mode === "maquina" ? vitoriasRobo  : name === "OZZY" ? vitoriasTony: vitoriasOzzy }
+            isOpponent={true}
+            />
           </div>
-        </footer>
-      )}
-    </main>
+        </div>
+      </div>
+    </div>
   );
 }
 

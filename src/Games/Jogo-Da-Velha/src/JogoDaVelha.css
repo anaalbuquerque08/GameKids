@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+.container-tic-tac-toe {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.home-page.tic-tac-toe {
+  justify-content: space-around;
+}
 
 /* Container principal */
 .jogo-da-velha {
@@ -12,21 +22,51 @@
   justify-content: flex-start;
 
   font-family: sans-serif;
-  min-height: 100vh; /* permite crescer se precisar */
-  background-color: #eee;
+  height: 500px; /* permite crescer se precisar */
   padding: 2rem 1rem;
+  margin-right: 14px;
+
+  border-radius: 12px;
+  border-width: 4px 8px 8px 4px;
+  border-style: solid;
+  border-color: #1b1515;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*  Container principal - ESQUILO */
+.jogo-da-velha.TONY {
+  background-color: #4b966b;
+}
+
+/*  Container principal - SAPO */
+.jogo-da-velha.OZZY {
+  background-color: #7e7d15;
 }
 
 /* Título do jogo */
 .title {
   text-align: center;
-  font-size: 2.5rem;
-  color: #555;
-  margin-bottom: 2rem;
+  font-size: 70px;
+  color: #eacd91;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border: 6px solid #1b1515;
+  width: 420px;
+}
+
+/* Título do jogo - SAPO */
+.title.OZZY {
+  background-color: #1c5220;
+}
+
+/* Título do jogo - ESQUILO */
+.title.TONY {
+  background-color: #316146;
 }
 
 /* Btns modo seleção do jogo - amigo / maquina */
-.mode-selection{
+.mode-selection {
   display: flex;
   gap: 22px;
 }
@@ -36,11 +76,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 4px;
 
   width: 100%;
-  max-width: 400px;  /* tamanho máximo do tabuleiro */
-  aspect-ratio: 1;    /* mantém quadrado */
+  max-width: 420px; /* tamanho máximo do tabuleiro */
+  aspect-ratio: 1; /* mantém quadrado */
+  height: 360px;
+
+  padding-block: 1px;
+  background-color: #000000;
+  border-radius: 12px;
+  border: 6px solid black;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* Estado de game-over */
@@ -54,10 +102,9 @@
   align-items: center;
   justify-content: center;
 
-  background-color: white;
-  border-radius: 6px;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 0px;
+
+  background-color: #eacd91;
   color: #00000066;
 
   cursor: pointer;
@@ -79,11 +126,20 @@
 
 /* Cores dos jogadores */
 .cell.O {
-  background-color: #99aa37;
+  background-image: url("/src/assets/TicTacToe/O.png");
+  background-position: center;
+  background-size: contain;
 }
 
 .cell.X {
-  background-color: #c45c1b;
+  background-image: url("/src/assets/TicTacToe/X.png");
+  background-position: center;
+  background-size: contain;
+}
+
+/* PEQUENA MARGIN */
+.level.mb{
+  margin-bottom: 8px;
 }
 
 /* Footer do jogo */
@@ -94,45 +150,87 @@
 
 /* Mensagem de vitória/empate */
 .winner-message {
-  margin: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 60px;
+  position: relative;
+  color: #eacd91;
+  top: -38px;
+
+  max-width: 400px;
+  margin: 0 auto;
+
+  border-width: 4px 8px 8px 8px;
+  border-style: solid;
+  border-color: #1b1515;
+  border-radius: 0 0 12px 12px;
 }
 
-.winner-message span.O {
-  color: #99aa37;
+/* Mensagem de vitória/empate  - SAPO */
+.winner-message.OZZY {
+  background: #c36e34;
 }
 
-.winner-message span.X {
-  color: #c45c1b;
-}
-
-.winner-message span.E {
-  color: #777;
+/* Mensagem de vitória/empate  - ESQUILO */
+.winner-message.TONY {
+  background-color: #527465;
 }
 
 /* Container e botão de reiniciar partida / Reescolher modo  */
-.footer-buttons{
+.footer-buttons {
   display: flex;
   gap: 22px;
+  position: relative;
+  top: -60px;
 }
 
-.jogo-da-velha button {
+.footer-buttons button {
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  background-color: #0c9200;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
 }
+.footer-buttons button:first-child {
+  position: relative;
+  left: -288px;
 
-.jogo-da-velha button:hover {
+  font-size: 30px;
+
+  background-color: #316146;
+  border-width: 4px 8px 8px 4px;
+  border-style: solid;
+  border-color: #1b1515;
+  border-radius: 8px;
+}
+
+.footer-buttons button:last-child {
+  position: relative;
+  left: 288px;
+
+  font-size: 30px;
+
+  background-color: #c57530;
+  border-width: 4px 8px 8px 4px;
+  border-style: solid;
+  border-color: #1b1515;
+  border-radius: 8px;
+}
+
+.footer-buttons button:first-child:hover {
   background-color: #0a7400;
   transform: translateY(-1px);
 }
 
+.footer-buttons button:last-child:hover {
+  background-color: #f88825;
+  transform: translateY(-1px);
+}
+
+.jogo-da-velha footer {
+  height: 0px;
+}
 
 @media (max-width: 500px) {
   .title {
