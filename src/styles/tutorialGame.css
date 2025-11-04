@@ -1,6 +1,4 @@
-/*! Thiago ta tudo organizadinho aqui,coloquei todas as variaveis de cor e espaçamento
-/*! Responsividade? HAhaha COM DEUs, fiz o que pude, o resto vc se vira bjoooo KKKKKKKKKKKKKK
-
+ 
 
 /* ================================
    TUTORIAL PAGE
@@ -28,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 20px;
+  padding: 60px 30px;
   border-top: var(--border-s);
   border-left: var(--border-s);
   border-right: var(--border-m);
@@ -39,6 +37,35 @@
   margin-right: 12px;
 }
  
+.inside-container{
+  background-color: var(--bege);
+  width: 100%;
+  height: 100%;
+
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m); 
+  border-radius: var(--radius-sm); 
+}
+
+.tutorial-game-info{ 
+  width: 50%;
+  height: 100%;
+  border-right: var(--border-m);
+  
+}
+
+ 
+.tutorial-text{ 
+    width: 50%;
+  height: 100%;
+}
+
 .tutorial-header {
   width: 100%;                   
   height: 75%;                   
@@ -58,37 +85,68 @@
   width: 100%;
   height: 87% ;
   background-color: var(--green-200); 
-  margin-bottom: 12px;
+  margin-bottom: 12px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m); 
+  border-radius: var(--radius-sm); 
 }
 
 .play-button{
  width: 100%;   
  height: 46px;
  margin-bottom: 12px;
+ background-color: var(--buttom-color);
+
+
+ font-size: var(--h3);
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m); 
+  border-radius: var(--radius-sm);  
 }
 
 .tutorial-footer {
   width: 100%;  
   height: 25%;    
-  background: pink;          /* parte de baixo proporcional */
+  background: var(--bege);          /* parte de baixo proporcional */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background: var(--bege);
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-m);
+  border-bottom: var(--border-m);
+  border-radius: var(--radius-md);
 }
 
+.tutorial-footer-box{
+   width: 99%;
+  height: 94%;
+  position: relative;
+  border-width: var(--border);
+  border-top: var(--border-s);
+  border-left: var(--border-s);
+  border-right: var(--border-s);
+  border-bottom: var(--border-s);
+  border-radius: var(--radius-sm);
+}
 
 /* -------------------------------
    Game Tabs
----------------------------------*/
-.tabs {
-  
-  display: flex;
-  gap: 15px;
-  width: 900px;
-}
+---------------------------------*/ 
 
-.tabTutorial{
+.tabTutorial{ 
   width: 100%;
   padding: 8px 12px;
   background: var(--tabs);
@@ -102,10 +160,11 @@
    font-size: var(--font-size-lg);
 }
 
-.tab.active {
-     width: 212px;
-  /* Fundo da tab ativa */
+.tabTutorial.active {
+  margin-left: -15px;
+  width: 300px;
   background: rgba(75, 150, 107, 0.5); 
+   
 }
 
 /* ================================

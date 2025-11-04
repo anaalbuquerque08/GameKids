@@ -1,10 +1,11 @@
 import React from "react";
-
-export default function TutorialTabs({ activeTab = "Como Jogar?", onTabClick }) {
-  const tabs = ["Como Jogar?", "" ];
+import "../../Styles/tutorialGame.css";
+export default function TutorialTabs({ activeTab = "COMO JOGAR?", onTabClick }) {
+  const tabs = ["COMO JOGAR?", "" ];
 
   return (
     <nav className="tabs">
+        <div></div>
       {tabs.map((tabTutorial) => (
         <button
           key={tabTutorial}

@@ -72,6 +72,9 @@
   --yellow-200: #E0960D;
   --yellow-250: #c07d00; 
 
+
+
+  --button-play: var(--theme-primary);
 }
 :root {
   --font-size-base: 16px;
@@ -111,14 +114,10 @@
    --award:url("../assets/components/award.png");
    --mushroom:url("../assets/components/mushroom.png");
 }
- 
-
-
-
-
 
 /* Tema squirrel */
 .theme-squirrel {
+  --buttom-color: #56B77F;
   --info-box: var( --orange-100);
   --character: url("../assets/characters/squirrel.png");
   --theme-name: "TONY";
@@ -138,11 +137,13 @@
   --theme-secondary: #facc15;  
   --theme-accent: #92400e;
   --tabs:#316146;
+  
   --background-cards-grid:rgba(75, 150, 107, 0.5)
 }
 
 /* Tema frog  */
 .theme-frog {
+  --buttom-color: #A2A011;
   --character: url("../assets/characters/frog.png");
   --theme-name: "OZZY";
   --theme-bg: url("../assets/backgrounds/background-frog.png");
@@ -159,5 +160,7 @@
   --theme-primary: #16a34a;  
   --theme-secondary: #4ade80;  
   --theme-accent: #065f46;
+   
+   
 }
  

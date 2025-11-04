@@ -1,3 +1,4 @@
+import React, { useEffect } from "react"; // Importar React e useEffect
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import "../Styles/tutorialGame.css";
 import TutorialTabs from "../Components/GameTutorial/TutorialTabs";
@@ -7,7 +8,14 @@ const TutorialGamePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const { theme, name } = location.state || { theme: "theme-squirrel", name: "ESQUILO" };
+ 
+  const storedTheme = localStorage.getItem("theme");
+  const storedName = localStorage.getItem("name");
+  
+  const { theme, name } = location.state || { 
+      theme: storedTheme || "theme-squirrel", 
+      name: storedName || "ESQUILO" 
+  };
 
   const gameNames = {
     "jogo-da-velha": "Jogo da Velha",
@@ -15,30 +23,18 @@ const TutorialGamePage = () => {
     memoria: "Memória",
   };
 
-  // Pode ter textos diferentes para cada jogo, AQUI TA SIMPLES, SÓ PRA EXEMPLO VIU KKKKK BJS!
   const tutorials = {
     "jogo-da-velha": "Objetivo: alinhar três símbolos iguais...",
     labirinto: "Objetivo: sair do labirinto no menor tempo...",
     memoria: "Objetivo: combinar os pares de cartas...",
   };
-  // OBS: Caso queira mais customizações por jogo (como descrições detalhadas, imagens ou componentes especiais),
-  // você pode criar componentes separados para cada jogo e chamá-los dinamicamente pelo `id`.
-  // Exemplo: const gameComponent = gameComponents[id]; return <>{gameComponent}</>;
-  // EXEMPLO REAL ANAAA:
-  //  const tutorialComponents = {
-  //   "jogo-da-velha": <JogoDaVelhaTutorial />,
-  //   "labirinto": <LabirintoTutorial />,
-  //   "memoria": <MemoriaTutorial />,
-  // };
-  // VAI RENDERIZAR:  {tutorialComponents[id] || <p>Tutorial não disponível.</p>}
+ 
+  useEffect(() => {
+    localStorage.setItem("name", name);
+    localStorage.setItem("theme", theme);
+  }, [name, theme]);  
 
-
-
-
-
-
-
-  return (
+  return ( 
     <div className={`tutorial-page ${theme}`}>
       <div className="tutorial-page-container">
 
@@ -47,7 +43,7 @@ const TutorialGamePage = () => {
             <TutorialTabs />
             <TutorialContainer />
           </main>
-           
+            
 
           <div className="tutorial-instructions">
             <div className="tutorial-instructions-card">
@@ -58,7 +54,10 @@ const TutorialGamePage = () => {
         </div>
 
         <div className="tutorial-footer">
-          <h2>Aqui eh o footer do jogo</h2>
+          <div className="tutorial-footer-box">
+            <h2>Aqui eh o footer do jogo</h2>
+          </div>
+          
         </div>
 
       </div>
