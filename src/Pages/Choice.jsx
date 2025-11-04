@@ -19,10 +19,6 @@ export default function Choice() {
     navigate("/home", { state: { theme, name } });
   };
 
-  React.useEffect(() => {
-    console.log(themeClass)
-  },[themeClass])
-
   return (
     <div className={`choice-page ${themeClass}`}>
       <div className="container">

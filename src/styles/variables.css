@@ -122,8 +122,10 @@
   --character: url("../assets/characters/squirrel.png");
   --theme-name: "TONY";
   --theme-bg: url("../assets/backgrounds/background-squirrel.png");
+  --theme-bg-memory-game: url("../assets/backgrounds/background-squirrel-memory-game.png");
  /*(popups) */
   --theme-popups-choice: url("../assets/popups/popups-choice-squirrel.png");
+  --theme-popups-choice-memory-game: url("../assets/popups/popups-memory-game-choice-squirrel.png");
  /*(buttons) */
   --theme-btn-close-normal: url("../assets/buttons/btn-close-normal-squirrel.png");
   --theme-btn-normal: url("../assets/buttons/btn-normal-squirrel.png");
@@ -147,8 +149,10 @@
   --character: url("../assets/characters/frog.png");
   --theme-name: "OZZY";
   --theme-bg: url("../assets/backgrounds/background-frog.png");
+  --theme-bg-memory-game: url("../assets/backgrounds/background-frog-memory-game.png");
  /*(popups) */
   --theme-popups-choice: url("../assets/popups/popups-choice-frog.png");
+  --theme-popups-choice-memory-game: url("../assets/popups/popups-memory-game-choice-frog.png");
  /*(buttons) */
   --theme-btn-close-normal: url("../assets/buttons/btn-close-normal-frog.png");
   --theme-btn-normal: url("../assets/buttons/btn-normal-frog.png");

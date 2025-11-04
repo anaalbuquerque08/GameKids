@@ -11,7 +11,7 @@ import jumpgame from "../assets/img-games/img-jumpgame.png";
 export const games = [
   { id: "jogo-da-velha", name: "JOGO DA VELHA", img: jogoDaVelha },
   { id: "labirinto", name: "LABIRINTO", img: labirinto },
-  { id: "libelula", name: "LIBÉLULA", img: libelula },
+  { id: "quizz", name: "QUIZZ", img: libelula },
   { id: "memoria", name: "MEMÓRIA", img: memoria }, 
   { id: "adivinha", name: "ADIVINHA", img: adivinha },
   { id: "alvo", name: "ALVO", img: alvo },

@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+.jogo-da-memoria {
+  padding: 1rem;
+}
+
+.jogo-da-memoria.choice-page{
+  display: block;
+  background: var(--theme-bg-memory-game) no-repeat center center / cover;
+}
+
+.jogo-da-memoria__conteudo {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 22px;
+  background: #00000080;
+  border-radius: 12px;
+}
+
+.jogo-da-memoria__conteudo h1{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  color: var(--bege);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.placar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.pontos {
+  position: relative;
+  padding: 12px 0;
+  font-size: 22px;
+  font-weight: normal;
+  color: var(--bege);
+}
+
+.pontos__titulo,
+.pontos__valor{
+  font-weight: normal;
+}
+
+.cartas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.carta {
+  max-width: 100%;
+  aspect-ratio: 3/4;
+  perspective: 1000px;
+
+  /* button */
+  appearance: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.carta:focus,
+.carta:focus-visible {
+  outline: 0.25rem auto -webkit-focus-ring-color;
+  outline-offset: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.carta__conteudo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.carta img {
+  max-width: 100%;
+}
+
+.carta--virada .carta__conteudo {
+  transform: rotateY(180deg);
+}
+
+.carta--encontrada {
+  animation: animar-encontrada 0.5s 0.8s forwards;
+}
+
+.carta__frente, .carta__costas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.carta__frente {
+  background-color: #eacd91;
+  background-image: url("/src/assets/memory/textura.png");
+  background-size: 100%;
+  background-position: center;
+}
+
+.carta__costas {
+  transform: rotateY(180deg);
+}
+
+.resultado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  transition-delay: 1s;
+}
+
+.resultado--aberto {
+  opacity: 1;
+  visibility: visible;
+}
+
+.memory_game.container{
+  background: var(--theme-popups-choice-memory-game) no-repeat center center;
+  background-size: contain;
+  height: 420px;
+}
+
+.memory_game img{
+  width: 220px;
+  height: 200px;
+}
+
+.memory_nivel{
+  color: #1B1515;
+  font-size: 22px;
+  margin-top: 42px;
+}
+
+.result_nivel{
+  color: #C57530;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+.rate-result{
+  font-size: 26px;
+  color: #1B1515;
+  margin-block: 6px;
+}
+
+.button {
+  border-radius: 8px;
+  border-width: 2px 4px 4px 2px;
+  border-color: #1B1515;
+  color: var(--bege);
+  background-color: #1C5220;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  font-size: 22px;
+  margin-block: 12px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button:hover {
+  background-color: #4a9469;
+}
+
+
+@keyframes animar-encontrada {
+  0% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 0.5;
+  }
+}
+
