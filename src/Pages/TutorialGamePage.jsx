@@ -87,15 +87,17 @@ const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
         </div>
 
         <div className="tutorial-footer">
+
+
           <div className="tutorial-footer-box">
+            
             <div className="character-info">
               <div className="character-img"></div>
               <h2>{name}</h2>
             </div>
 
 
-            <div className="point-container-box"> aqui vai as moedas
-
+            <div className="point-container-box"> 
               <div className="point-container">
                 <div className="coin"></div>
                 <p>{coins}</p>
@@ -104,13 +106,15 @@ const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
                 <div className="star"></div>
                 <p>{stars}</p>
               </div>
-
-
-
             </div>
 
-            <div> aqui vai a box</div>
+            <div className="box-bottom">
+               <p>Lembre-se, a brincadeira é para ser divertida! perder faz parte :)</p>
+            </div>
           </div>
+
+
+          
         </div>
 
       </div>
