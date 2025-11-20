@@ -201,7 +201,7 @@
    Games Container
 ---------------------------------*/
 
-.games-container {
+.games-container { 
   width: 100%;
   height: 66%;
   background-color: var(--background-cards-grid);
@@ -226,7 +226,7 @@
 
 .game-card {
   width: 100%;
-  height: 90%;
+  height: 90%; 
   border: none;
   background: var(--bege);
   background-size: contain;
@@ -257,7 +257,7 @@
 
 .name-game {
   padding-top: var(--space-s);
-  font-size: 28px;
+  font-size: 26px;
   text-align: center;
   font-family: "ByteBounce", sans-serif;
   margin-bottom: 6px;

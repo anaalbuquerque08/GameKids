@@ -61,12 +61,14 @@
   --purple-200: #8CA1D7; 
 
   /* COLORS - GREEN */
+  --green-50: #AAAA7A;
   --green-100: #90A878;
   --green-200: #155943;
 
 
   --orange-100:#E07D36;
   /* COLORS - YELLOW */
+  --yellow-50:  #dabb7e;
   --yellow-100: #FFDC9A;
   --yellow-150: #F6C25F;
   --yellow-200: #E0960D;
@@ -119,6 +121,7 @@
 .theme-squirrel {
   --buttom-color: #56B77F;
   --info-box: var( --orange-100);
+  --instructions-card: var( --green-50);
   --character: url("../assets/characters/squirrel.png");
   --theme-name: "TONY";
   --theme-bg: url("../assets/backgrounds/background-squirrel.png");
@@ -165,6 +168,8 @@
   --theme-secondary: #4ade80;  
   --theme-accent: #065f46;
    
+
+  --instructions-card: var( --yellow-50);
    
 }
  
