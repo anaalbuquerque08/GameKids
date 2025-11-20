@@ -6,7 +6,7 @@ import TutorialContainer from "../Components/GameTutorial/TutorialContainer";
 import keyboard from "/src/assets/components/keyboard.png";
 import arrowkey from "/src/assets/components/arrowkey.png";
 import mouse from "/src/assets/components/mouse.png";
-
+import mushroom from "/src/assets/components/mushroom.png";
 import { games } from "../Components/gamesData";
 
 const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
@@ -60,22 +60,19 @@ const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
             <div className="tutorial-instructions-card">
               <div className="instructions-card">
                 <img
-                  src={keyboard}
-                  height={90}
+                  src={keyboard} 
                   alt="Imagem de um teclado"
                 />
               </div>
               <div className="instructions-card">
                 <img
-                  src={arrowkey}
-                  height={90}
+                  src={arrowkey} 
                   alt="Imagem das setas de um teclado"
                 />
               </div>
               <div className="instructions-card">
                 <img
-                  src={mouse}
-                  height={90}
+                  src={mouse} 
                   alt="Imagem de um teclado"
                 />
               </div>
@@ -109,7 +106,11 @@ const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
             </div>
 
             <div className="box-bottom">
-               <p>Lembre-se, a brincadeira é para ser divertida! perder faz parte :)</p>
+               <p>Lembre-se, a brincadeira é para ser divertida! <br/>perder faz parte :)</p>
+               <div className="img-bottom">   <img
+                  src={mushroom} 
+                  alt="Imagem de um cogumelo"
+                /></div>
             </div>
           </div>
 

@@ -125,16 +125,16 @@
 
 .coin {
   background: var(--coin);
-  width: 42px;
-  height: 55px;
+  width: 49px;
+  height: 62px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .star {
   background: var(--star);
-  width: 42px;
-  height: 55px;
+  width: 49px;
+  height: 62px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
