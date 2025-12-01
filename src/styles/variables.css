@@ -1,175 +1,193 @@
- 
-:root { 
-  /* FONT SIZE */
-  --label-s: 10px;
-  --label: 12px;
-  --pf: 14px;
-  --h6: 16px;
-  --h5: 20px;
-  --h4: 24px;
-  --h3: 28px;
-  --h2: 40px;
-  --h1: 68px;
+ :root {
+   /* FONT SIZE */
+   --label-s: 10px;
+   --label: 12px;
+   --pf: 14px;
+   --h6: 16px;
+   --h5: 20px;
+   --h4: 24px;
+   --h3: 28px;
+   --h2: 40px;
+   --h1: 68px;
 
 
-  /* BORDER*/
-  --border-s: 4px solid var(--black);
-  --border-m: 6px solid var(--black);
-  --border-lg: 8px solid var(--black);
-
-  
-  /* FONT WEIGHT */
-  --regular: 400;
-  --medium: 500;
-  --semi-bold: 600;
-  --bold: 700;
-
-  /* Padding */
-  --space-xs: 2px;
-  --space-s: 4px;
-  --space-sm: 6px;
-  --space-m: 12px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 40px;
-  --space-3xl: 48px;
-  --space-4xl: 64px;
-
-  /* BORDER RADIUS */
-  --radius-xm: 4px;
-  --radius-md: 8px;
-  --radius-sm: 12px;
-  --radius-lg: 16px;
-  --radius-round: 100px;
-
-  /* SHADOWS */
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-medium: rgba(0, 0, 0, 0.25);
-  --shadow-heavy: rgba(0, 0, 0, 0.4);
-
-  /* COLORS - BASIC */
-  --white: #ffffff;
-  --black: #000000;
-  --bege:#EACD91;
-  --grey-100: #F8F8F8;
-  --grey-200: #D2D2D2;
-  --grey-300: #A2A2A2;
-
-  /* COLORS - PURPLE */
-  --purple-100: #B9D3F8;
-  --purple-200: #8CA1D7; 
-
-  /* COLORS - GREEN */
-  --green-50: #AAAA7A;
-  --green-100: #90A878;
-  --green-200: #155943;
+   /* BORDER*/
+   --border-s: 4px solid var(--black);
+   --border-m: 6px solid var(--black);
+   --border-lg: 8px solid var(--black);
 
 
-  --orange-100:#E07D36;
-  /* COLORS - YELLOW */
-  --yellow-50:  #dabb7e;
-  --yellow-100: #FFDC9A;
-  --yellow-150: #F6C25F;
-  --yellow-200: #E0960D;
-  --yellow-250: #c07d00; 
+   /* FONT WEIGHT */
+   --regular: 400;
+   --medium: 500;
+   --semi-bold: 600;
+   --bold: 700;
+
+   /* Padding */
+   --space-xs: 2px;
+   --space-s: 4px;
+   --space-sm: 6px;
+   --space-m: 12px;
+   --space-md: 16px;
+   --space-lg: 24px;
+   --space-xl: 32px;
+   --space-2xl: 40px;
+   --space-3xl: 48px;
+   --space-4xl: 64px;
+
+   /* BORDER RADIUS */
+   --radius-xm: 4px;
+   --radius-md: 8px;
+   --radius-sm: 12px;
+   --radius-lg: 16px;
+   --radius-round: 100px;
+
+   /* SHADOWS */
+   --shadow-light: rgba(0, 0, 0, 0.1);
+   --shadow-medium: rgba(0, 0, 0, 0.25);
+   --shadow-heavy: rgba(0, 0, 0, 0.4);
+
+   /* COLORS - BASIC */
+   --white: #ffffff;
+   --black: #000000;
+   --bege: #EACD91;
+   --grey-100: #F8F8F8;
+   --grey-200: #D2D2D2;
+   --grey-300: #A2A2A2;
+
+   /* COLORS - PURPLE */
+   --purple-100: #B9D3F8;
+   --purple-200: #8CA1D7;
+
+   /* COLORS - GREEN */
+   --green-50: #AAAA7A;
+   --green-100: #90A878;
+   --green-200: #155943;
+   --green-300: #A2A011;
 
 
+   --orange-100: #E07D36;
+   --orange-200: #BA5E2A;
+   /* COLORS - YELLOW */
+   --yellow-50: #dabb7e;
+   --yellow-100: #FFDC9A;
+   --yellow-150: #F6C25F;
+   --yellow-200: #E0960D;
+   --yellow-250: #c07d00;
+   --yellow-opaco: #e69d699d;
 
-  --button-play: var(--theme-primary);
-}
-:root {
-  --font-size-base: 16px;
-  --font-size-lg: 20px;
-  --font-size-sm: 12px;
+
+   --button-play: var(--theme-primary);
+ }
+
+ :root {
+   --font-size-base: 16px;
+   --font-size-lg: 20px;
+   --font-size-sm: 12px;
 
 
    /* Sombra */
-  --theme-bg-shadow: rgba(0, 0, 0, 0.4); 
+   --theme-bg-shadow: rgba(0, 0, 0, 0.4);
 
-  /* Cores gerais */
-  --color-button-bg: #4ade80;
-  --color-button-text: #ffffff;
-  --color-window-bg: #1e1e2e;
-  --color-window-border: #333333;
+   /* Cores gerais */
+   --color-button-bg: #4ade80;
+   --color-button-text: #ffffff;
+   --color-window-bg: #1e1e2e;
+   --color-window-border: #333333;
 
-  /* Layout */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --space-md: 16px;
+   /* Layout */
+   --radius-sm: 4px;
+   --radius-md: 8px;
+   --space-md: 16px;
 
-  /* Fallback  */
-  --theme-bg: url("../assets/backgrounds/default.png");
-  --theme-name: "Default";
-  --theme-primary: #888888;
-  --theme-secondary: #aaaaaa;
-  --theme-accent: #555555;
-}
+   /* Fallback  */
+   --theme-bg: url("../assets/backgrounds/default.png");
+   --theme-name: "Default";
+   --theme-primary: #888888;
+   --theme-secondary: #aaaaaa;
+   --theme-accent: #555555;
+ }
+
+
+
+
 
  :root {
-  --sidebar-character:url("../assets/components/character-banner.png");
-  --slider-level:url("../assets/components/slider-level.png");
-  --hearts:url("../assets/components/hearts.png");
-  --coin:url("../assets/components/coins.png");
-  --star:url("../assets/components/star.png");  
+   --sidebar-character: url("../assets/components/character-banner.png");
+   --slider-level: url("../assets/components/slider-level.png");
+   --hearts: url("../assets/components/hearts.png");
+   --coin: url("../assets/components/coins.png");
+   --star: url("../assets/components/star.png");
 
-   --award:url("../assets/components/award.png");
-   --mushroom:url("../assets/components/mushroom.png");
-}
+   --award: url("../assets/components/award.png");
+   --mushroom: url("../assets/components/mushroom.png");
+ }
 
-/* Tema squirrel */
-.theme-squirrel {
-  --buttom-color: #56B77F;
-  --info-box: var( --orange-100);
-  --instructions-card: var( --green-50);
-  --character: url("../assets/characters/squirrel.png");
-  --theme-name: "TONY";
-  --theme-bg: url("../assets/backgrounds/background-squirrel.png");
-  --theme-bg-memory-game: url("../assets/backgrounds/background-squirrel-memory-game.png");
- /*(popups) */
-  --theme-popups-choice: url("../assets/popups/popups-choice-squirrel.png");
-  --theme-popups-choice-memory-game: url("../assets/popups/popups-memory-game-choice-squirrel.png");
- /*(buttons) */
-  --theme-btn-close-normal: url("../assets/buttons/btn-close-normal-squirrel.png");
-  --theme-btn-normal: url("../assets/buttons/btn-normal-squirrel.png");
-  --theme-btn-hover: url("../assets/buttons/btn-hover-squirrel.png");
+ /* Tema squirrel */
+ .theme-squirrel {
 
-  --theme-info-box:url("../assets/components/info-box-squirrel.png");
-  --lider-box:url("../assets/components/lider-box-frog.png");
-   
-  --theme-bg-banner:url("../assets/components/background-banner-squirrel.png");  
-  --theme-primary: #d97706;   
-  --theme-secondary: #facc15;  
-  --theme-accent: #92400e;
-  --tabs:#316146;
-  
-  --background-cards-grid:rgba(75, 150, 107, 0.5)
-}
+    
 
-/* Tema frog  */
-.theme-frog {
-  --buttom-color: #A2A011;
-  --character: url("../assets/characters/frog.png");
-  --theme-name: "OZZY";
-  --theme-bg: url("../assets/backgrounds/background-frog.png");
-  --theme-bg-memory-game: url("../assets/backgrounds/background-frog-memory-game.png");
- /*(popups) */
-  --theme-popups-choice: url("../assets/popups/popups-choice-frog.png");
-  --theme-popups-choice-memory-game: url("../assets/popups/popups-memory-game-choice-frog.png");
- /*(buttons) */
-  --theme-btn-close-normal: url("../assets/buttons/btn-close-normal-frog.png");
-  --theme-btn-normal: url("../assets/buttons/btn-normal-frog.png");
-  --theme-btn-hover: url("../assets/buttons/btn-hover-frog.png");
+   --character: url("../assets/characters/squirrel.png");
+   --theme-name: "TONY";
+   --theme-bg: url("../assets/backgrounds/background-squirrel.png");
+   --theme-bg-memory-game: url("../assets/backgrounds/background-squirrel-memory-game.png");
+   /*(popups) */
+   --theme-popups-choice: url("../assets/popups/popups-choice-squirrel.png");
+   --theme-popups-choice-memory-game: url("../assets/popups/popups-memory-game-choice-squirrel.png");
+   /*(buttons) */
+   --theme-btn-close-normal: url("../assets/buttons/btn-close-normal-squirrel.png");
+   --theme-btn-normal: url("../assets/buttons/btn-normal-squirrel.png");
+   --theme-btn-hover: url("../assets/buttons/btn-hover-squirrel.png");
 
-  --theme-info-box:url("../assets/components/info-box-frog.png");
-  --lider-box:url("../assets/components/lider-box-frog.png");
-  --theme-bg-banner:url("../assets/components/background-banner-frog.png");  
-  --theme-primary: #16a34a;  
-  --theme-secondary: #4ade80;  
-  --theme-accent: #065f46;
-   
+   --theme-info-box: url("../assets/components/info-box-squirrel.png");
+   --lider-box: url("../assets/components/lider-box-frog.png");
 
-  --instructions-card: var( --yellow-50);
-   
-}
- 
+   --theme-bg-banner: url("../assets/components/background-banner-squirrel.png");
+   --theme-primary: #d97706;
+   --theme-secondary: #facc15;
+   --theme-accent: #92400e;
+   --tabs: #316146;
+   --tabs-active: rgba(75, 150, 107, 0.5);
+
+   --info-box: var(--green-100);
+   --info-box-2: var(--orange-100);
+   --tutorial-instructions-card: var(--green-200);
+   --buttom-color: #56B77F;
+   --instructions-card: var(--green-50);
+   --background-cards-grid: rgba(75, 150, 107, 0.5)
+ }
+
+ /* Tema frog  */
+ .theme-frog {
+   --buttom-color: #A2A011;
+   --character: url("../assets/characters/frog.png");
+   --theme-name: "OZZY";
+   --theme-bg: url("../assets/backgrounds/background-frog.png");
+   --theme-bg-memory-game: url("../assets/backgrounds/background-frog-memory-game.png");
+   /*(popups) */
+   --theme-popups-choice: url("../assets/popups/popups-choice-frog.png");
+   --theme-popups-choice-memory-game: url("../assets/popups/popups-memory-game-choice-frog.png");
+   /*(buttons) */
+   --theme-btn-close-normal: url("../assets/buttons/btn-close-normal-frog.png");
+   --theme-btn-normal: url("../assets/buttons/btn-normal-frog.png");
+   --theme-btn-hover: url("../assets/buttons/btn-hover-frog.png");
+
+   --theme-info-box: url("../assets/components/info-box-frog.png");
+   --lider-box: url("../assets/components/lider-box-frog.png");
+   --theme-bg-banner: url("../assets/components/background-banner-frog.png");
+   --theme-primary: #16a34a;
+   --theme-secondary: #4ade80;
+   --theme-accent: #065f46;
+
+
+   --info-box: var(--orange-100);
+   --info-box-2: var(--green-300);
+   --tutorial-instructions-card: var(--orange-200);
+   --buttom-color: var(--green-300);
+   --tabs: #653C0E;
+   --tabs-active: var(--yellow-opaco);
+   --instructions-card: var(--yellow-50);
+   --background-cards-grid: var(--yellow-opaco);
+
+ }

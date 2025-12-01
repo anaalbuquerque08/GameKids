@@ -148,7 +148,7 @@
   height: 26%;
   padding: var(--space-lg);
   font-size: var(--h6);
-  background-color: var(--info-box);
+  background-color: var(--info-box-2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,9 +193,8 @@
   font-size: var(--font-size-lg);
 }
 
-.tab.active {
-  /* Fundo da tab ativa */
-  background: rgba(75, 150, 107, 0.5);
+.tab.active { 
+  background: var(--tabs-active);
 }
 /* -------------------------------
    Games Container
@@ -289,7 +288,7 @@
 }
 
 .lider-box {
-  background: var(--green-200);
+  background: var(--info-box);
   display: flex;
   position: relative;
 }

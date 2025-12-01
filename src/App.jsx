@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";  
 import TutorialGamePage from "./Pages/TutorialGamePage";
 import Choice from "./Pages/Choice";
-import BackgroundMusic from "./Components/BackgroundMusic"; // importando música
+import BackgroundMusic from "./Components/BackgroundMusic"; 
 import GamePage from "./Pages/GamePage"; 
 
 function App() {
