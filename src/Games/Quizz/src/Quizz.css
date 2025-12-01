@@ -1,0 +1,77 @@
+.image-container {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-top: 60px;
+  gap: 40px;
+  width: 600px;
+}
+
+.image-container img {
+  width: 220px;
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-container h1 {
+  color: #c57530;
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+.quiz-container h2 {
+  color: #1b1515;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.quiz-container label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #1b1515;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* esconder o radio */
+.quiz-container label input[type="radio"] {
+  display: none;
+}
+
+/* criar a bolinha */
+.quiz-container label::before {
+  content: "";
+  background-color: #c5753070;
+  width: 14px;
+  height: 14px;
+  border: 3px solid #1b1515;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* bolinha preenchida quando marcado */
+.quiz-container label:has(input[type="radio"]:checked)::before {
+  background: #ba5f11; /* cor da bolinha preenchida */
+  border-color: #1b1515;
+}
+
+.buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-tony {
+  background-color: #316146 !important;
+}
+
+.btn-tony:hover {
+  background-color: #4a9469 !important;
+}
