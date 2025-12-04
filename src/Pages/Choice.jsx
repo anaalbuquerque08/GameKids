@@ -5,7 +5,7 @@ import CharacterDisplay from "../Components/Choice/CharacterDisplay";
 import ChoiceText from "../Components/Choice/ChoiceText";
 import AnimalButtons from "../Components/Choice/AnimalButtons";
 import "../styles/variables.css";
-import "../styles/Choice.css";
+import "../styles/choice.css";
 
 
 
