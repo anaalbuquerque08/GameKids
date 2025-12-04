@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/tutorialGame.css";
+import "../../styles/tutorialGame.css";
 import { games } from "../gamesData";
 import hearts from "/src/assets/components/hearts.png";
 

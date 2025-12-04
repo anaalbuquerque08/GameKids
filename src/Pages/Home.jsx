@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import "../Styles/home.css";
+import "../styles/home.css";
 import Sidebar from "../Components/Home/Sidebar";
 import GameTabs from "../Components/Home/GameTabs";
 import GamesContainer from "../Components/Home/GamesContainer";
