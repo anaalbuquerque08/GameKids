@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Quizz.css";
 import Radio from "../components/Radio";
 import perguntasOzzy from "./data/perguntasOzzy";
@@ -53,7 +54,9 @@ function App() {
     <div className={`choice-page ${theme}`}>
       {index < perguntas.length ? (
         <form className="container">
-          <button class="close-btn"></button>
+          <Link to="/home">
+            <button class="close-btn"></button>
+          </Link>
           <div className="image-container">
             <img
               src={personagemImg}
