@@ -1,30 +1,32 @@
 import React, { useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import "../styles/tutorialGame.css";
-import TutorialTabs from "../Components/GameTutorial/TutorialTabs";
-import TutorialContainer from "../Components/GameTutorial/TutorialContainer";
+import TutorialHeader from "../Components/GameTutorial/TutorialHeader"; 
+import TutorialFooter from "../Components/GameTutorial/TutorialFooter"; 
+import { games } from "../Components/gamesData";
 import keyboard from "/src/assets/components/keyboard.png";
 import arrowkey from "/src/assets/components/arrowkey.png";
 import mouse from "/src/assets/components/mouse.png";
 import mushroom from "/src/assets/components/mushroom.png";
-import { games } from "../Components/gamesData";
+
 
 const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const location = useLocation();
-
   const storedTheme = localStorage.getItem("theme");
   const storedName = localStorage.getItem("name");
 
   const { theme, name } = location.state || {
     theme: storedTheme || "theme-squirrel",
-    name: storedName || "ESQUILO"
+    name: storedName || "ESQUILO",
   };
-
 
   const currentGame = games.find(game => game.id === id);
 
+  useEffect(() => {
+    localStorage.setItem("name", name);
+    localStorage.setItem("theme", theme);
+  }, [name, theme]);
 
   if (!currentGame) {
     return (
@@ -36,88 +38,21 @@ const TutorialGamePage = ({ coins = 32, stars = "5/25" }) => {
     );
   }
 
-
-  useEffect(() => {
-    localStorage.setItem("name", name);
-    localStorage.setItem("theme", theme);
-  }, [name, theme]);
-
-  const { name: gameName, instructions } = currentGame;
-
   return (
     <div className={`tutorial-page ${theme}`}>
       <div className="tutorial-page-container">
-
-        <div className="tutorial-header">
-          <main className="main-content">
-
-            <TutorialTabs gameId={id} />
-            <TutorialContainer gameId={id} />
-          </main>
-
-
-          <div className="tutorial-instructions">
-            <div className="tutorial-instructions-card">
-              <div className="instructions-card">
-                <img
-                  src={keyboard} 
-                  alt="Imagem de um teclado"
-                />
-              </div>
-              <div className="instructions-card">
-                <img
-                  src={arrowkey} 
-                  alt="Imagem das setas de um teclado"
-                />
-              </div>
-              <div className="instructions-card">
-                <img
-                  src={mouse} 
-                  alt="Imagem de um teclado"
-                />
-              </div>
-
-            </div>
-
-            <button className="play-button" onClick={() => navigate(`/games/${id}`)}>JOGAR!</button>
-          </div>
-        </div>
-
-        <div className="tutorial-footer">
-
-
-          <div className="tutorial-footer-box">
-            
-            <div className="character-info">
-              <div className="character-img"></div>
-              <h2>{name}</h2>
-            </div>
-
-
-            <div className="point-container-box"> 
-              <div className="point-container">
-                <div className="coin"></div>
-                <p>{coins}</p>
-              </div>
-              <div className="point-container">
-                <div className="star"></div>
-                <p>{stars}</p>
-              </div>
-            </div>
-
-            <div className="box-bottom">
-               <p>Lembre-se, a brincadeira é para ser divertida! <br/>perder faz parte :)</p>
-               <div className="img-bottom">   <img
-                  src={mushroom} 
-                  alt="Imagem de um cogumelo"
-                /></div>
-            </div>
-          </div>
-
-
-          
-        </div>
-
+        <TutorialHeader
+          id={id}
+          keyboard={keyboard}
+          arrowkey={arrowkey}
+          mouse={mouse}
+        />
+        <TutorialFooter
+          name={name}
+          coins={coins}
+          stars={stars}
+          mushroom={mushroom}
+        />
       </div>
     </div>
   );
