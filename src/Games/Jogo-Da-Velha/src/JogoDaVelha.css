@@ -126,13 +126,13 @@
 
 /* Cores dos jogadores */
 .cell.O {
-  background-image: url("/src/assets/TicTacToe/O.png");
+  background-image: url("/TicTacToe/O.png");
   background-position: center;
   background-size: contain;
 }
 
 .cell.X {
-  background-image: url("/src/assets/TicTacToe/X.png");
+  background-image: url("/TicTacToe/X.png");
   background-position: center;
   background-size: contain;
 }

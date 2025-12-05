@@ -1,5 +1,5 @@
 import CharacterInfoTicTacToe from "./CharacterInfoTicTacToe";
-import roboImg from "/src/assets/characters/robo.png";
+import roboImg from "/TicTacToe/robo.png";
 import ozzyImg from "/src/assets/characters/frog.png";
 import tonyImg from "/src/assets/characters/squirrel.png";
 

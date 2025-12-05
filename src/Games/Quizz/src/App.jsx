@@ -47,8 +47,8 @@ function App() {
 
   const personagemImg =
     name === "TONY"
-      ? "/src/assets/memory/Tony-Bom.png"
-      : "/src/assets/memory/Ozzy-Bom.png";
+      ? "/memory/Tony-Bom.png"
+      : "/memory/Ozzy-Bom.png";
 
   return (
     <div className={`choice-page ${theme}`}>

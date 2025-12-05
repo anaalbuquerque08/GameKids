@@ -120,7 +120,7 @@ a:hover {
 
 .carta__frente {
   background-color: #eacd91;
-  background-image: url("/src/assets/memory/textura.png");
+  background-image: url("/memory/textura.png");
   background-size: 100%;
   background-position: center;
 }

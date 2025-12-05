@@ -162,7 +162,7 @@ function App() {
 
     if (isHover && e.target.innerText === "Robo") {
       characterDiv.style.backgroundImage =
-        "url('/src/assets/characters/robo.png')";
+        "url('/TicTacToe/robo.png')";
     } else {
       characterDiv.style.backgroundImage = "var(--character)";
     }

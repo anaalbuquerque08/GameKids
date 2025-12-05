@@ -6,32 +6,32 @@ export const getResultados = () => {
       titulo: "Excelente",
       imagem:
         name === "TONY"
-          ? "/src/assets/memory/Tony-Excelente.png"
-          : "/src/assets/memory/Ozzy-Excelente.png",
+          ? "/memory/Tony-Excelente.png"
+          : "/memory/Ozzy-Excelente.png",
       min: 75,
     },
     {
       titulo: "Bom",
       imagem:
         name === "TONY"
-          ? "/src/assets/memory/Tony-Bom.png"
-          : "/src/assets/memory/Ozzy-Bom.png",
+          ? "/memory/Tony-Bom.png"
+          : "/memory/Ozzy-Bom.png",
       min: 50,
     },
     {
       titulo: "Esquecido",
       imagem:
         name === "TONY"
-          ? "/src/assets/memory/Tony-Esquecido.png"
-          : "/src/assets/memory/Ozzy-Esquecido.png",
+          ? "/memory/Tony-Esquecido.png"
+          : "/memory/Ozzy-Esquecido.png",
       min: 25,
     },
     {
       titulo: "Amnésia",
       imagem:
         name === "TONY"
-          ? "/src/assets/memory/Tony-Amnésia.png"
-          : "/src/assets/memory/Ozzy-Amnésia.png",
+          ? "/memory/Tony-Amnésia.png"
+          : "/memory/Ozzy-Amnésia.png",
       min: 0,
     },
   ];
