@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/tutorialGame.css";
+import "../../styles/tutorialGame.css";
 export default function TutorialTabs({ activeTab = "COMO JOGAR?", onTabClick }) {
   const tabs = ["COMO JOGAR?", "" ];
 

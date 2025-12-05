@@ -4,8 +4,8 @@ import CloseButton from "../Components/Choice/CloseButton";
 import CharacterDisplay from "../Components/Choice/CharacterDisplay";
 import ChoiceText from "../Components/Choice/ChoiceText";
 import AnimalButtons from "../Components/Choice/AnimalButtons";
-import "../Styles/variables.css";
-import "../Styles/Choice.css";
+import "../styles/variables.css";
+import "../styles/choice.css";
 
 
 

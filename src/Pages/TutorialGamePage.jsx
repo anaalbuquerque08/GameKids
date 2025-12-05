@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import "../Styles/tutorialGame.css";
+import "../styles/tutorialGame.css";
 import TutorialTabs from "../Components/GameTutorial/TutorialTabs";
 import TutorialContainer from "../Components/GameTutorial/TutorialContainer";
 import keyboard from "/src/assets/components/keyboard.png";
