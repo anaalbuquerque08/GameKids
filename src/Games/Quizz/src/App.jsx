@@ -46,16 +46,20 @@ function App() {
   }
 
   const personagemImg =
-    name === "TONY"
-      ? "/memory/Tony-Bom.png"
-      : "/memory/Ozzy-Bom.png";
+    name === "TONY" ? "/memory/Tony-Bom.png" : "/memory/Ozzy-Bom.png";
 
   return (
     <div className={`choice-page ${theme}`}>
       {index < perguntas.length ? (
         <form className="container">
-          <Link to="/home">
-            <button class="close-btn"></button>
+          <Link
+            to="/home"
+            state={{
+              name: localStorage.getItem("name"),
+              theme: localStorage.getItem("theme"),
+            }}
+          >
+            <button className="close-btn"></button>
           </Link>
           <div className="image-container">
             <img

@@ -12,7 +12,7 @@ export default function Home() {
     theme: "theme-squirrel",
     name: "ESQUILO",
   };
-
+  
   React.useEffect(() => {
     localStorage.setItem("name", name);
     localStorage.setItem("theme", theme);

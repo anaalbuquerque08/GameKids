@@ -8,7 +8,7 @@ export default function NotFoundGame() {
     <div className="notfound-wrapper">
       <div className="notfound-card">
         <img
-        className={`${name === "TONY" ? "tony-image" : "ozzy-image"}`}
+          className={`${name === "TONY" ? "tony-image" : "ozzy-image"}`}
           src={
             name === "TONY"
               ? "/memory/Tony-Amnésia.png"
@@ -17,10 +17,20 @@ export default function NotFoundGame() {
           alt="Personagem triste"
         />
         <h1>Jogo em Andamento</h1>
-        <p>  Não fique triste! Enquanto esse ainda não está pronto, 
-          divirta-se com os outros jogos disponíveis.</p>
+        <p>
+          {" "}
+          Não fique triste! Enquanto esse ainda não está pronto, divirta-se com
+          os outros jogos disponíveis.
+        </p>
 
-        <Link to="/" className="btn-voltar">
+        <Link
+          className="btn-voltar"
+          to="/home"
+          state={{
+            name: localStorage.getItem("name"),
+            theme: localStorage.getItem("theme"),
+          }}
+        >
           Voltar para a Home
         </Link>
       </div>
